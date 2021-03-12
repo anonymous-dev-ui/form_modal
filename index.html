@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <!-- stylesheet  -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- action buttons  -->
+    <button id="loginBtn" class="logBtn">Login</button>
+    <button id="regbtn" class="regBtn">Registration</button>
+        <!-- popup box of the form  -->
+    <div class="formArea"><button id="crossBtn">X</button>
+        <form class="reg_form" action="" method="post">
+            
+            <label for="heading"><h2>Registration Form</h2></label>
+            <label for="FirstName">First Name</label>
+            <input type="text" name="FirstName" placeholder="first name" id="FirstName">
+            <label for="LastName">Last Name</label>
+            <input type="text" name="LasttName" placeholder="last name" id="LastName">
+            <label for="DateOfBirth">Date of Birth</label>
+            <input type="date" name="DateOfBirth" id="DateOfBirth">
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="password" id="password">
+            <input type="button" value="registration">
+        </form>
+        <form class="login_form" action="" method="post">
+            <label for="heading"><h2>Login Form</h2></label>
+
+           <label for="username">Username</label>
+           <input type="text" name="username" id="username">
+           <label for="password">Password</label>
+           <input type="password" name="password">
+           <input type="button" value="Login">
+        </form>
+    </div>
+    <!-- javascript file  -->
+<script src="./app.js"></script>
+
+</body>
+
+</html>

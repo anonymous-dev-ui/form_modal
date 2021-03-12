@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* action button  */
+.logBtn, .regBtn {
+padding: 5px;
+background: yellow;
+color: black;
+margin-right: 5px;
+}
+/* popup box  */
+.formArea{
+    
+    position: relative;
+    width:450px;
+    transition: 0.5s;
+    height: 70%;
+    background:linear-gradient(45deg, #0aeef973, #043aff7a);    
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 2px 12px 9px 5px rgba(23, 27, 27, 0.384);  
+}
+/* form style  */
+form{
+    position: absolute;
+    padding: 15px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+/* input field styling  */
+form>input{
+    margin-top: 2px;
+    padding: 5px;
+    width: 90%;
+    border: 1px ridge    rgb(0, 195, 255);
+    border-radius: 50px;
+}
+/* input field placeholder text styling  */
+form>input[placeholder]{
+    font-family: cursive;
+    letter-spacing: 2px;
+}
+/* input type button  styling  */
+form>input[type=button]{
+    border: 1px solid;
+    margin-top: 12px;
+    width: fit-content;
+    background-color: rgb(28, 255, 255); 
+    transition: 0.2s;
+}
+/* input type button hover  styling  */
+form>input[type=button]:hover{
+ 
+    background-color: black;
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+}
+/* input field labels  */
+form>label{    font-size: 18px;
+    color: White;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 10px;
+}
+/* active class added in the formArea when user click on the login or register button  */
+.formArea.active{
+    transition: 1s;
+    animation-name: box;
+    animation-duration: 2s;
+}
+/* also inlucding the animation when popup box is active  */
+@keyframes box{
+    0%{
+       transition: 5s;
+        top: -90%;
+        right: -30%;
+        transform: rotate(360deg);
+    }
+    100%{
+      right: 0%;
+        top: 0%;
+    }
+}
+/* when user close the the popup box the r_anime class will added in  formArea  */
+.r_anime{
+ animation: box_r 5s;
+}
+@keyframes box_r{
+    0%{
+        top: 0;
+        right: 0;
+    }
+    100%{
+        top: -100%;
+        right: -30%;
+        transform: rotate(360deg);
+    }
+
+}
+/* close button styling */
+.formArea>button{
+
+    padding: 5px;
+    z-index: 1111;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(45deg, rgb(241, 4, 36), rgb(252, 6, 240));
+    width: 30px;
+    height:30px;
+    font-size: 1em;
+    transition: 0.3s;
+    border: 2px double black;
+}
+.formArea>button:hover{
+
+background-color: black;
+
+}
